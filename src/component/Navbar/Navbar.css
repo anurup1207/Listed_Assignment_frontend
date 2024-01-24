@@ -1,0 +1,6 @@
+.nav{
+    width: 218px;
+    height: 1047px;
+    flex-shrink: 0;
+    position:fixed
+}
