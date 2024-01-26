@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&display=swap');
+
 #main {
 
     background-color: #FAFAFB;
@@ -100,4 +102,60 @@
 
 #remove {
     color: red;
+}
+
+#table {
+    margin-top: -150px;
+    margin-left: 80px;
+    margin-right: 80px;
+    width: "100%";
+}
+
+.text_upload {
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Paragraph/UI Type/text-2xl/[S] */
+    font-family: Figtree;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    /* 133.333% */
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0 25px;
+    
+}
+
+
+.row {
+    width: 1034px;
+    height: 58px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--Light-Gohan, #FFF);
+
+    padding-bottom: 16px;
+}
+
+
+.column {
+    /* padding-left: 130px; */
+    text-align: center;
+}
+
+.text-table {
+    color: var(--Light-Bulma, #231F20);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Figtree;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 171.429% */
 }

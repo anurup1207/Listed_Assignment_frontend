@@ -47,6 +47,8 @@ const data = [
 const Upload = () => {
   const fileInputRef = useRef(null);
   const [uploadedFile, setUploadedFile] = useState(null);
+  const [selectedTags, setSelectedTags] = useState({});
+  const [showTable, setShowTable] = useState(false);
 
   const handleUpload = () => {
     if (fileInputRef.current) {
@@ -58,14 +60,25 @@ const Upload = () => {
     const file = e.target.files[0];
     if (file) {
       setUploadedFile(file);
-      // You can perform additional logic here if needed
     }
   };
 
-  
-
   const handleRemove = () => {
     setUploadedFile(null);
+    setShowTable(false);
+  };
+  const handleTable = () => {
+    if (uploadedFile) {
+      setShowTable(true);
+    }
+
+  };
+
+  const handleTagChange = (id, selectedTag) => {
+    setSelectedTags((prevTags) => ({
+      ...prevTags,
+      [id]: prevTags[id] ? [...prevTags[id], selectedTag] : [selectedTag],
+    }));
   };
 
   return (
@@ -111,7 +124,9 @@ const Upload = () => {
             </p>
           </div>
           <div className="button-container">
-            <button className="upload-button" >Upload</button>
+            <button className="upload-button" onClick={handleTable}>
+              Upload
+            </button>
           </div>
         </div>
         <input
@@ -122,7 +137,80 @@ const Upload = () => {
         />
       </div>
 
-      <div id="upload"></div>
+      {/* <div id="table">
+        <p className="text_upload">Uploads</p>
+        <table>
+          <tr>
+            <th className="table-heading">SI No.</th>
+            <th className="table-heading">Links</th>
+            <th className="table-heading">Prefix</th>
+            <th className="table-heading">Add Tags</th>
+            <th className="table-heading">Selected Tags</th>
+          </tr>
+        </table>
+      </div> */}
+      {showTable && (
+        <div id="table">
+          <p className="text_upload">Uploads</p>
+          <table>
+            <thead>
+              <tr>
+                <th className="table-heading ">SI No.</th>
+                <th className="table-heading ">Links</th>
+                <th className="table-heading ">Prefix</th>
+                <th className="table-heading ">Add Tags</th>
+                <th className="table-heading ">Selected Tags</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((item) => (
+                <tr className="row" key={item.id}>
+                  <td className="column text-table">{item.id}</td>
+                  <td className="column text-table">
+                    {" "}
+                    <a href={`http://${item.links}`} target="_blank">
+                      {" "}
+                      {item.links}
+                    </a>
+                  </td>
+                  <td className="column text-table">{item.prefix}</td>
+                  <td className="column text-table">
+                    <select
+                      style={{
+                        borderRadius: "8px",
+                        border: "1px solid var(--Light-Beerus-Beerus, #F2F2F2)",
+                        background: "var(--Light-Gohan, #FFF)",
+                        width: "150px",
+                        height: "32px",
+                      }}
+                      value={selectedTags[item.id] || ""}
+                      onChange={(e) => handleTagChange(item.id, e.target.value)}
+                    >
+                      <option value="">Select Tag</option>
+                      <option value="Technology">Technology</option>
+                      <option value="Fashion">Fashion</option>
+                      <option value="Food">Food</option>
+                      <option value="Travel">Travel</option>
+                      <option value="Sports">Sports</option>
+                      <option value="Music">Music</option>
+                      <option value="Art">Art</option>
+                      <option value="Health">Health</option>
+                      <option value="Education">Education</option>
+                      <option value="Finance">Finance</option>
+                      {/* Add more options as needed */}
+                    </select>
+                  </td>
+                  <td className="column text-table">
+                    {selectedTags[item.id]
+                      ? selectedTags[item.id].join(", ")
+                      : ""}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };
