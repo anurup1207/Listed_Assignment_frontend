@@ -1,0 +1,20 @@
+.leftPanel{
+    width: "50%";
+    float: "left";
+    height: "100vh";
+    background-color: "#605BFF"; 
+    overflow: "hidden";
+    position: "relative";
+    display: "flex";
+    justify-content: "center"; 
+    align-items: "center"; 
+    color: "white";
+}
+
+.image{
+    width: "80.15px";
+  height: "80.15px";
+  position: "absolute";
+  top: "54.32px";
+  left: "61.03px";
+}
