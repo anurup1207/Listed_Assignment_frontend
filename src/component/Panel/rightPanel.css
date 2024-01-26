@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    width: 400px;
+    height: 32.933px;
+    margin-left: 93px;
+}
+
+.button-style {
+    width: 400px;
+    height: 32.933px;
+    background-color:white;
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+    color: var(--Secondary-Text, #858585);
+    border: 0px solid white;
+    border-radius: 5px;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .loginContainer{
+    width: 422.635px;
+    height: 347.988px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background: #FFF;
+    /* margin: 10px; */
+    margin-left: 93px;
+    
+  }
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px;
+    color: #000;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .input-container input{
+    width: 356.77px;
+    height: 43.91px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--Background, #F5F5F5);
+    border-width: 0;
+    border:white;
+    color: #000;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 16.4px;
+  }
+  input:focus{   
+    outline: 0 none;
+  }
+  a{
+    color: var(--Link, #346BD4);
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    margin: 5px;
+    cursor: pointer;
+    align-self: baseline;
+    margin-left: 30px;
+  }
+  .loginBut {
+    width: 356.77px;
+    height: 50.91px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #605BFF;
+    margin: 10px;
+    margin-top: 25px;
+    border: none;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+  
+  }
+  .loginBut:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgb(199, 199, 199);
+  }
+  .loginBut p{
+    color:white;
+    font-size: 20px;
+    margin-top: 13px;
+  }
+  .siG{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:18px;
+    height: 4em;
+    width: 24em;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(152, 145, 255);
+    border-width: 3px;
+    border-style: dashed;
+    transition: all .2s ease-in-out;
+  }
+  .siG:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgb(199, 199, 199);
+    cursor: pointer;
+  }
+  .siG p{
+    font-size: 20px;
+  }
