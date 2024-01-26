@@ -37,7 +37,7 @@ const leftPanelStyle = {
     display: 'flex',
     justifyContent: 'center', // Center the content horizontally
     alignItems: 'center', // Center the content vertically
-    color: 'white', 
+    color: '#F8FAFF', 
     clipPath: 'polygon(0 0, 100% 0, 75% 100%, 0% 100%)',
     
 };
@@ -60,15 +60,19 @@ const imageStyle = {
     lineHeight: '88px',
     letterSpacing: '0em',
     textAlign: 'left',
+    position:'absolute',
+    top:'40%',
+    left:'24%',
+    
   };
 
   const bottomImageStyle = {
     
-height: 'Hug (48px)',
-width:'299px',
+height: 'Hug (50px)',
+width:'355px',
 position:'absolute',
 top:' 909px',
-// left: '144.5px',change it after slant partion
+left: '22.5%',
 
 
 

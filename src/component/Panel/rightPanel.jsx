@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const RightPanel = () => {
   return (
     <div style={{ width: '50%', float: 'left', height: '100vh', backgroundColor: '#F8FAFF' }}>
+      <div style={{marginLeft:'14%',marginTop:'19%'}}>
       <div>
 
       <div style={textStyleSignIn}>
@@ -17,12 +18,22 @@ const RightPanel = () => {
       </div>
 
       <div className="button-container">
-        <button className="button-style">Sign in with Google</button>
-        <button className="button-style">Sign in with Apple</button>
+        <button className="button-style">
+        <img
+            src="google-icon.png"
+            style={{marginRight:'8%'}}
+          />
+          Sign in with Google
+          </button>
+        <button className="button-style">
+          <img src="apple.png" 
+          style={{marginRight:'8%'}}
+           />
+          Sign in with Apple</button>
       </div>
 
       <div className="loginContainer">
-  
+        <div style={{height:'10%'}}></div>
     
         <div className="input-container">
           <label>Email address </label>
@@ -54,8 +65,15 @@ const RightPanel = () => {
         </button> */}
       
       </div>
-
+      <div style={{display:'flex',fontStyle:'Lato',fontWeight:'400',fontSize:'16px'}}>
+      <p style={{marginLeft:'20%',marginRight:'1.3%', color:'#858585'}}>Don’t have an account? </p>
+      <p style={{color:'#346BD4'}}>Register here</p>
       </div>
+      
+      </div>
+       
+
+    </div>
     </div>
   );
 };
